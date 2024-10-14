@@ -1,12 +1,12 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { AccesoService } from "./acceso.service";
 
 @Controller('acceso')
 export class AccesoController {
 
-  @Get("/consultoria")
-  getConsultoria():string{
-    return new AccesoService().get("consultoria");
+  @Get("/:kind")
+  getConsultoria(@Param() kind:any):string{
+    return new AccesoService().get(kind.kind);
   };
 
 }
