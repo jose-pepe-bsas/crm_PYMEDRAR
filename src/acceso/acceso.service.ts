@@ -9,9 +9,9 @@ export class AccesoService {
    * Get a good
    *
    */
-  public get(kind:string) : string{
-    if (this.kinds.includes(kind)){
-      return kind;
+  public get(kind) : string{
+    if (this.kinds.includes(kind.kind)){
+      return kind.kind;
     } else{
       console.error("No existe ese accesible.")
     }
