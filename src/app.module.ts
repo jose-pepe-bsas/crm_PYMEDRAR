@@ -1,10 +1,15 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ConfigModule } from "@nestjs/config";
 import { AccesoModule } from './acceso/acceso.module';
 
 @Module({
-  imports: [AccesoModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+  }),
+    AccesoModule],
   controllers: [AppController],
   providers: [AppService],
 })
