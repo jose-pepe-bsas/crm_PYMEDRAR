@@ -1,0 +1,1 @@
+2024-10-14 +automatizar generar un precommit con bashscript para correr linter y formateador de nest por cada commit
